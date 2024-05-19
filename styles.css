@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --radiusmain: 20px;
+}
+
+html, body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente l'elemento container */
+    align-items: center;     /* Centra verticalmente l'elemento container */
+    
+}
+
+.container{
+    display: flex;           /* Utilizza Flexbox per allineare i figli */
+    flex-wrap: wrap;
+    width: 650px;
+}
+
+.box{
+    flex: 1 1 45%;
+}
+
+.box:nth-child(2){
+    border-top-right-radius: var(--radiusmain);
+    border-bottom-right-radius: var(--radiusmain);
+    background-color: white;
+    padding: 20px;
+}
+
+.product{
+    display: block; /* Imposta l'immagine come elemento a blocco */
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radiusmain) 0px 0px var(--radiusmain);
+}
+
+h1{
+    font-family: 'Fraunces',sans-serif;
+    color:  hsl(212, 21%, 14%);
+    font-size: 35px;
+}
+
+.costo{
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    width: 100%;
+    height: 50px;
+    border-radius: 12px;
+    border:none;
+    font-family: sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button img{
+    margin-right: 10px;
+    width: 20px;
+    height: auto;
+}
+
+button:hover{
+    background-color: hsl(158, 34%, 18%);
+}
+
+
+.prezzo-scontato{
+    text-decoration: line-through;
+}
+
+.categoria{
+    font-weight: 700;
+}
+
+.prezzi{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 600px) {
+    .container{
+        display: flex;           /* Utilizza Flexbox per allineare i figli */
+        flex-direction: column;
+        width: 350px;
+    }
+
+    .product {
+        content: url('images/image-product-mobile.jpg');
+        display: block;
+        border-radius: var(--radiusmain) var(--radiusmain) 0px 0px;
+    }
+
+    .box:nth-child(2){ 
+        border-radius: 0px 0px var(--radiusmain) var(--radiusmain);
+        background-color: white;
+        padding: 20px;
+    }
+    
+
+}
